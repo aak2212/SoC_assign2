@@ -1,0 +1,148 @@
+<html>
+    <head>
+        <style>
+            #abc {
+                font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+            #abc td, #abc th{
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+            
+            #customers th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #4CAF50;
+                color: white;
+            }
+        </style>
+        <title>Search box</title>
+    </head>
+    <body>
+        <center>
+        Name<input type = "text"  onkeyup = "search_name()" id = "t1" placeholder = "Search Name">
+        </center>
+        <table id = "abc">
+            <tr>
+                <td>Roll number</td>
+                <td>Name</td>
+                <td>Year</td>
+            </tr>
+            <tr>
+                    <td>170003</td>
+                    <td class = "name">Aakarsh Singh</td>
+                    <td>2017</td>
+                  </tr>
+                  <tr>
+                    <td>170010</td>
+                    <td class = "name">Aayush Sharma</td>
+                    <td>2017</td>
+                  </tr>
+                  <tr>
+                    <td>170041</td>
+                    <td class = "name">Achyut Kr. Verma</td>
+                    <td>2017</td>
+                  </tr>
+                  <tr>
+                    <td>170144</td>
+                    <td class = "name">Archit Awasthi</td>
+                    <td>2017</td>
+                  </tr>
+                  <tr>
+                    <td>170250</td>
+                    <td class = "name">Dikshant Sachan</td>
+                    <td>2017</td>
+                  </tr>
+                  <tr>
+                    <td>170274</td>
+                    <td class = "name">Geetam</td>
+                    <td>2017</td>
+                  </tr>
+                  <tr>
+                    <td>170322</td>
+                    <td class = "name">Jayant Kumar Goyal</td>
+                    <td>2017</td>
+                  </tr>
+                  <tr>
+                    <td>170478</td>
+                    <td class = "name">Pragyan Pandey</td>
+                    <td>2017</td>
+                  </tr>
+                  <tr>
+                    <td>170499</td>
+                    <td class = "name">Pratigya Tomar</td>
+                    <td>2017</td>
+                  </tr>
+                  <tr>
+                    <td>170531</td>
+                    <td class = "name">Rahul Rohit</td>
+                    <td>2017</td>
+                  </tr>
+                  <tr>
+                    <td>170576</td>
+                    <td class = "name">Ritesh Kumar</td>
+                    <td>2017</td>
+                  </tr>
+                  <tr>
+                    <td>170609</td>
+                    <td class = "name">Sajal Chaurasia</td>
+                    <td>2017</td>
+                  </tr>
+                  <tr>
+                    <td>170618</td>
+                    <td class = "name">Sameer Kumar Singh</td>
+                    <td>2017</td>
+                  </tr>
+                  <tr>
+                    <td>170707</td>
+                    <td class = "name">Snehil Saluja</td>
+                    <td>2017</td>
+                  </tr>
+                  <tr>
+                    <td>170791</td>
+                    <td class = "name">Vijit Maik</td>
+                    <td>2017</td>
+                  </tr>
+                  <tr>
+                    <td>1700817</td>
+                    <td class = "name">Yash Maheshwari</td>
+                    <td>2017</td>
+                  </tr>
+                  <tr>
+                    <td>170818</td>
+                    <td class = "name">Yash Mittal</td>
+                    <td>2017</td>
+                  </tr>
+        </table>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script>
+        function search_name() {
+            /*var input = document.getElementById("t1").value.toLowerCase();
+            var reqOp = document.getElementsByClassName("name");
+            var a = document.getElementsByTagName("tr");
+        
+            for(i=0; i<reqOp.length; i++) {
+                if(!reqOp[i].innerHTML.toLowerCase().includes(input)) {
+                    a[i+1].style.display = "none";
+        
+                }
+            }*/
+
+            var input = document.getElementById("t1").value.toLowerCase();
+            var reqOp = $(".name");
+            var a = $("tr");
+
+            for(i=0; i<reqOp.length; i++){
+                if(!reqOp[i].innerHTML.toLowerCase().includes(input)) {
+                    a[i+1].hidden = true;
+                }
+            }
+                    
+        }
+        </script>
+    </body>
+</html>
